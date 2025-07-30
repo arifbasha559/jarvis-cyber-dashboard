@@ -1,46 +1,29 @@
-💡 What it Does:
+# JARVIS Cyber Dashboard
 
-It aggregates, analyzes, and visualizes data from various security sources in real-time to:
+⚡ A futuristic, real-time cybersecurity monitoring dashboard inspired by the J.A.R.V.I.S interface from Iron Man. Built for visualizing security threats, intrusion attempts, and incident metrics with a sleek HUD-style interface.
 
-Detect potential threats
+---
 
-Track network activity
+## 🚀 Features
 
-Monitor incidents and events
+- 🧠 JARVIS-inspired dark theme UI
+- 📈 Real-time bar charts and radial graphs
+- 🌐 IP-based event logs (with relative timestamps)
+- 📊 Data throughput meters and incident counters
+- 🧩 Modular layout (Sensors, Incidents, Reports, HUD)
+- 🟢 Active/Inactive sensor status tracking
 
-View intrusion patterns and logs
+---
 
-🔧 Also Known As:
+## 🛠️ Tech Stack
 
-SOC Dashboard (Security Operations Center)
+- **React.js** + **Vite** (or Next.js)
+- **Tailwind CSS**
+- **Recharts** (for bar charts, if needed)
+- **Heroicons / Lucide Icons**
+- Optionally: `faker.js` for mock data, or a real-time backend via Socket.io
 
-Threat Intelligence Dashboard
+---
 
-Incident Response Dashboard
+## 📁 Project Structure
 
-Network Monitoring Interface
-
-📌 Key Features You Can See:
-
-Circular threat radars (Incident count & detection)
-
-Real-time bar charts for event types (Execution, Persistence, Discovery, etc.)
-
-Activity timelines
-
-IP-based event logs (with relative times like “2 minutes ago”)
-
-Data throughput stats (e.g. 980 kb/s)
-
-Tabs for modules: HUD, EXPLORE, INCIDENTS, INTEL, etc.
-
-
-## 🎨 Visual Style:
-
-Futuristic UI (Inspired by JARVIS from Iron Man)
-
-Dark theme
-
-Neon cyan & orange highlights
-
-HUD-style (Heads-Up Display) UI with radial gauges and animated effects
