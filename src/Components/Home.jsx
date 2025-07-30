@@ -1,5 +1,4 @@
-import React from "react";
-import Left from "./left";
+import Left from "./Left";
 import Mid from "./Mid";
 import Right from "./Right";
 
