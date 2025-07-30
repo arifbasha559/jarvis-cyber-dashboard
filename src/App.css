@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+.jarvis {
+  font-family: "Orbitron", monospace,sans-serif;
+ 
+}
+body {
+  font-family: "Exo 2", monospace,sans-serif;
+ overflow-y: hidden;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+  transform-origin: 200px 200px; /* center of SVG */
+}
+.animate-spin-slow-reverse {
+  animation: spin-slow 20s linear infinite reverse;
+  transform-origin: 200px 200px; /* center of SVG */
+}
