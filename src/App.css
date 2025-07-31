@@ -3,9 +3,13 @@
   font-family: "Orbitron", monospace,sans-serif;
  
 }
-body {
+#root {
   font-family: "Exo 2", monospace,sans-serif;
  overflow-y: hidden;
+ background-color: black;
+ width: 100vw;
+ height: 100vh;
+ display: flex;
 }
 
 @keyframes spin-slow {
