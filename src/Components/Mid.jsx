@@ -10,112 +10,42 @@ import { LineChart, Line, ResponsiveContainer } from "recharts";
 import BarChart from "./Bars";
 
 const data = [
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 0 },
-  { value: 1 },
+  "HUD",
+  "KILLBOX",
+  "EXPLORE",
+  "INVENTORY",
+  "COMBAT", 
+  "INTEL",
+  "INCIDENTS",
+  "REPORTS",
+  "CONFIG",
+  
 ];
+
 const Mid = () => {
   return (
     <div>
       <div className="flex justify-around items-center border-b border-b-white/20 h-12 px-2">
-        <input
-          type="radio"
-          name="tab"
-          id="hud"
-          defaultChecked
-          className="hidden peer/hud"
-        />
-        <label
-          htmlFor="hud"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/hud:border-[#01E3FF]"
-        >
-          HUD
-        </label>
+  {data.map((item, index) => (
+    <div key={item} className="relative">
+      <input
+        type="radio"
+        name="tab"
+        id={item.toLowerCase()}
+        defaultChecked={index === 0}
+        className="peer hidden"
+      />
+      <label
+        htmlFor={item.toLowerCase()}
+        className="peer-checked:border-[#01E3FF] border-transparent border-b-2 px-3 py-2 cursor-pointer text-sm text-white"
+      >
+        {item}
+      </label>
+    </div>
+  ))}
 
-        <input
-          type="radio"
-          name="tab"
-          id="killbox"
-          className="hidden peer/killbox"
-        />
-        <label
-          htmlFor="killbox"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/killbox:border-[#01E3FF]"
-        >
-          KILLBOX
-        </label>
 
-        <input
-          type="radio"
-          name="tab"
-          id="explore"
-          className="hidden peer/explore"
-        />
-        <label
-          htmlFor="explore"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/explore:border-[#01E3FF]"
-        >
-          EXPLORE
-        </label>
-
-        <input
-          type="radio"
-          name="tab"
-          id="intel"
-          className="hidden peer/intel"
-        />
-        <label
-          htmlFor="intel"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/intel:border-[#01E3FF]"
-        >
-          INTEL
-        </label>
-
-        <input
-          type="radio"
-          name="tab"
-          id="incidents"
-          className="hidden peer/incidents"
-        />
-        <label
-          htmlFor="incidents"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/incidents:border-[#01E3FF]"
-        >
-          INCIDENTS
-        </label>
-
-        <input
-          type="radio"
-          name="tab"
-          id="reports"
-          className="hidden peer/reports"
-        />
-        <label
-          htmlFor="reports"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/reports:border-[#01E3FF]"
-        >
-          REPORTS
-        </label>
-
-        <input
-          type="radio"
-          name="tab"
-          id="config"
-          className="hidden peer/config"
-        />
-        <label
-          htmlFor="config"
-          className="text-base group relative h-full px-2 cursor-pointer flex items-center border-b-2 border-transparent peer-checked/config:border-[#01E3FF]"
-        >
-          CONFIG
-        </label>
+        
       </div>
       <div className="grid grid-cols-10 py-2 pb-5  border-b-2 border-b-white/20">
         <div className="col-span-3 grid grid-cols-3 gap-2">
@@ -1135,7 +1065,7 @@ const Mid = () => {
               </div>
               <div className="w-full h-fit flex justify-between ">
                 <div className="bg-[#0E3040] h-3 my-auto w-4/7">
-                  <div className="w-2/3 bg-[#01E3FF] h-full"></div>
+                  <div className="w-5/6 bg-[#01E3FF] h-full"></div>
                 </div>
                 <div className=" w-2/6 text-right flex justify-between">
                   290 <span className="">InActive</span>

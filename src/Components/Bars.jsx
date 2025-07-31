@@ -23,7 +23,7 @@ const BarChart = () => {
       {bars.map((bar, i) => (
         <div
           key={i}
-          className={`w-[15px] bg-gradient-to-t ${bar.gradient}`}
+          className={`min-w-1.5 w-[15px] bg-gradient-to-t ${bar.gradient}`}
           style={{ height: bar.height }}
         ></div>
       ))}
